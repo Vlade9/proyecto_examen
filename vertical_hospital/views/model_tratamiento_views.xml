@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="model_tratamiento_tre_view" model="ir.ui.view">
+            <field name="name">model.tratamiento.tree.view</field>
+            <field name="model">model.tratamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Tratamientos">
+                    <field name="codigo_tratamiento"/>
+                    <field name="nombre_tratamiento"/>
+                    <field name="medico_tratante"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="model_tratamiento_form_view" model="ir.ui.view">
+            <field name="name">model.tratamiento.form.view</field>
+            <field name="model">model.tratamiento</field>
+            <field name="arch" type="xml">
+                <form string="Tratamiento">
+                    <sheet>
+                        <group>
+                            <field name="codigo_tratamiento"/>
+                            <field name="nombre_tratamiento"/>
+                            <field name="medico_tratante"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_model_tratamiento" model="ir.actions.act_window">
+            <field name="name">Tratamientos</field>
+            <field name="res_model">model.tratamiento</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

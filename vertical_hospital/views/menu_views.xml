@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <menuitem name="Vertical Hospital" id="menu_principal_examen" sequence="10" web_icon="vertical_hospital,static/description/icon.png">
+<!--            <menuitem name="Principal" id="menu_item_principal" sequence="10"/>-->
+            <menuitem name="Pacientes" id="menu_item_pacientes" sequence="10" action="action_model_paciente"/>
+            <menuitem name="Tratamientos" id="menu_item_tratamientos" sequence="10" action="action_model_tratamiento"/>
+        </menuitem>
+
+</odoo>
