@@ -7,7 +7,7 @@
     'description': """Modulo de Test para verticalizar gestion de hospital""",
     'author': "Vladimir González Guerra",
     'category': '',
-    'version': '16.0.20230723.1',
+    'version': '16.0.20230723.2',
     'depends': ['base', 'mail', 'web'],
     'data': [
         'data/sequences.xml',

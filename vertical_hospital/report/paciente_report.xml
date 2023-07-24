@@ -3,68 +3,63 @@
 
     <template id="print_paciente_document">
 
-
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
-                <t t-call="web.external_layout">
-                    <div class="page">
-                        <div class="page">
-                            <t t-set="estados" t-value="{'draft': 'Borrador', 'alta': 'Alta', 'baja': 'Baja'}"/>
-                            <div class="container">
-                                <h3 class="text-center">Listado de pacientes</h3>
-                                <br/>
-                                <table class="table table-striped">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th class="text-center">Secuencia</th>
-                                            <th class="text-center">Nombre</th>
-                                            <th class="text-center">DNI</th>
-                                            <th class="text-center">Fecha Alta</th>
-                                            <th class="text-center">Fecha Actualizacion</th>
-                                            <th class="text-center">Estado</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <t t-foreach="docs" t-as="o">
-                                            <tr>
-                                                <td class="text-center">
-                                                    <t t-esc="o.code"/>
-                                                </td>
-                                                <td class="text-center">
-                                                    <t t-esc="o.name"/>
-                                                </td>
-                                                <td class="text-center">
-                                                    <t t-esc="o.dni"/>
-                                                </td>
-                                                <td class="text-center">
-                                                    <t t-esc="o.fecha_alta"/>
-                                                </td>
-                                                <td class="text-center">
-                                                    <t t-esc="o.fecha_actualizacion"/>
-                                                </td>
-                                                <td class="text-center">
-                                                    <t t-esc="estados[o.state]"/>
-                                                </td>
-                                            </tr>
-                                        </t>
-                                    </tbody>
-                                </table>
-                            </div>
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <t t-set="estados" t-value="{'draft': 'Borrador', 'alta': 'Alta', 'baja': 'Baja'}"/>
+                    <div class="container">
+                        <h3 class="text-center">Listado de pacientes</h3>
+                        <br/>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Secuencia</th>
+                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center">DNI</th>
+                                    <th class="text-center">Fecha Alta</th>
+                                    <th class="text-center">Fecha Actualizacion</th>
+                                    <th class="text-center">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="o">
+                                    <tr>
+                                        <td class="text-center">
+                                            <t t-esc="o.code"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="o.name"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="o.dni"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="o.fecha_alta"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="o.fecha_actualizacion"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="estados[o.state]"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
 
-                            <div class="footer">
-                                <br/>
-                                <div class="text-center" style="border-top: 1px solid black;">
-                                    <div class="text-muted">
-                                        Pagina:
-                                        <span class="page"/>
-                                        /
-                                        <span class="topage"/>
-                                    </div>
-                                </div>
+                    <div class="footer">
+                        <br/>
+                        <div class="text-center" style="border-top: 1px solid black;">
+                            <div class="text-muted">
+                                Pagina:
+                                <span class="page"/>
+                                /
+                                <span class="topage"/>
                             </div>
                         </div>
                     </div>
-                </t>
+                </div>
             </t>
         </t>
     </template>
